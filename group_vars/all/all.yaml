@@ -2,10 +2,10 @@ ansible_user: ec2-user
 ansible_password: DevOps321
 MONGODB_HOST: mongodb.piridishop.shop
 REDIS_HOST: redis.piridishop.shop
-MYSQL_HOST: mysql.piridishop.shop 
-RABBITMQ_HOST: rabbitmq.piridishop.shop 
-CATALOGUE_HOST: catalogue.piridishop.shop
-USER_HOST: user.piridishop.shop
-CART_HOST: cart.piridishop.shop
-SHIPPING_HOST: shipping.piridishop.shop
-PAYMENT_HOST: payment.piridishop.shop
+MYSQL_HOST: 172.31.2.213 
+RABBITMQ_HOST: 172.31.10.99
+CATALOGUE_HOST: 172.31.14.175
+USER_HOST: 172.31.13.129
+CART_HOST: 172.31.1.112
+SHIPPING_HOST: 172.31.7.220
+PAYMENT_HOST: 172.31.8.19
