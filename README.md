@@ -380,8 +380,6 @@ This will:
 - [Ansible Documentation](https://docs.ansible.com/)
 - [AWS EC2 Module](https://docs.ansible.com/ansible/latest/collections/amazon/aws/ec2_instance_module.html)
 - [Route53 Module](https://docs.ansible.com/ansible/latest/collections/amazon/aws/route53_module.html)
-- [RoboShop Project](https://github.com/roboshop-devops)
-
 ---
 
 ## 📞 Support & Contribution
