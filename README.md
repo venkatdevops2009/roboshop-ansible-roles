@@ -404,16 +404,6 @@ This project is provided as-is for educational and development purposes.
 
 GitHub: [@venkatdevops2009](https://github.com/venkatdevops2009)
 
----
-
-## 🔗 Related Projects
-
-- [RoboShop DevOps](https://github.com/roboshop-devops)
-- Ansible Role Collections
-- AWS Infrastructure Automation
-
----
-
 ## 📋 Checklist for First-Time Deployment
 
 - [ ] Fork/Clone repository
@@ -428,9 +418,3 @@ GitHub: [@venkatdevops2009](https://github.com/venkatdevops2009)
 - [ ] Test service connectivity
 - [ ] Access frontend via domain name
 - [ ] Monitor logs in `/var/log/roboshop/ansible.log`
-
----
-
-**Last Updated**: July 2026
-**Language**: Jinja (Ansible Templates)
-**Status**: Active Development
