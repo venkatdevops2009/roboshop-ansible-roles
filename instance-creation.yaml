@@ -4,7 +4,7 @@
   vars:
     instances: ["mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend"]
     image_id: ami-0220d79f3f480ecf5
-    domain_name: daws90s.shop # replace with your domain
+    domain_name: piridishop.shop # replace with your domain
     action: create
   tasks:
   - name: create ec2 instances
@@ -19,21 +19,12 @@
     loop: "{{ instances }}"
     register: ec2_output
     when: action == "create"
-
-  # - name: print output
-  #   debug:
-  #     msg: "{{ ec2_output }}"
-
-  # - name: create route53 record
-  #   debug:
-  #     msg: "Instance Name: {{ item.item }} PrivateIP: {{ item.instances[0].private_ip_address }}"
-  #   loop: "{{ ec2_output.results }}"
-
+  
   - name: create r53 records
     amazon.aws.route53:
       state: present
       zone: "{{ domain_name }}"
-      record: "{{ item.item }}.{{ domain_name }}" #mongodb.daws90s.shop
+      record: "{{ item.item }}.{{ domain_name }}" 
       type: A
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
@@ -59,7 +50,7 @@
     amazon.aws.route53:
       state: absent
       zone: "{{ domain_name }}"
-      record: "{{ item }}.{{ domain_name }}" # mongodb.daws90s.shop
+      record: "{{ item }}.{{ domain_name }}" 
       ttl: 1
       type: A
     loop: "{{ instances  }}"  
@@ -69,7 +60,7 @@
     amazon.aws.route53:
       state: absent
       zone: "{{ domain_name }}"
-      record: "{{ domain_name }}" # daws90s.shop
+      record: "{{ domain_name }}" 
       ttl: 1
       type: A
     loop: "{{ instances  }}"  
